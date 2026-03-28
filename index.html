@@ -28,6 +28,15 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4305704904656915"
     crossorigin="anonymous"></script>
+  <style>
+    [data-ad-section][hidden] {
+      display: none !important;
+    }
+
+    ins.adsbygoogle[data-ad-status="unfilled"] {
+      display: none !important;
+    }
+  </style>
   <script src="./Backend Developer Portfolio Template_files/96679ab482f5d8c0.js"></script>
   <script src="./Backend Developer Portfolio Template_files/6ee6f298bd8eb0ab.js"></script>
   <script src="./Backend Developer Portfolio Template_files/bdcf412efdaebffe.js"></script>
@@ -237,7 +246,7 @@
           </div>
         </div>
       </section>
-      <section class="px-4 pb-8">
+      <section class="px-4 pb-8" data-ad-section hidden>
         <div class="max-w-6xl mx-auto">
           <div class="rounded-xl border border-gray-800 bg-gray-900/40 p-4 backdrop-blur-sm">
             <p class="mb-3 text-xs uppercase tracking-[0.24em] text-gray-500">Sponsored</p>
@@ -248,9 +257,6 @@
               data-ad-slot="1440159115"
               data-ad-format="auto"
               data-full-width-responsive="true"></ins>
-            <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
           </div>
         </div>
       </section>
@@ -326,7 +332,7 @@
           </div>
         </div>
       </section>
-      <section class="px-4 pb-8">
+      <section class="px-4 pb-8" data-ad-section hidden>
         <div class="max-w-6xl mx-auto">
           <div class="rounded-xl border border-gray-800 bg-gray-900/40 p-4 backdrop-blur-sm">
             <p class="mb-3 text-xs uppercase tracking-[0.24em] text-gray-500">Sponsored</p>
@@ -337,9 +343,6 @@
               data-ad-slot="9127077441"
               data-ad-format="auto"
               data-full-width-responsive="true"></ins>
-            <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
           </div>
         </div>
       </section>
@@ -409,7 +412,7 @@
           </div>
         </div>
       </section>
-      <section class="px-4 pb-8">
+      <section class="px-4 pb-8" data-ad-section hidden>
         <div class="max-w-6xl mx-auto">
           <div class="rounded-xl border border-gray-800 bg-gray-900/40 p-4 backdrop-blur-sm">
             <p class="mb-3 text-xs uppercase tracking-[0.24em] text-gray-500">Sponsored</p>
@@ -420,9 +423,6 @@
               data-ad-slot="1544002834"
               data-ad-format="auto"
               data-full-width-responsive="true"></ins>
-            <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
           </div>
         </div>
       </section>
@@ -489,7 +489,49 @@
         </div>
       </section>
     </main>
-      </div>
-    </body>
+  </div>
+  <script>
+    (function () {
+      var allowedHosts = {
+        "hasan-ehsan.cloud": true,
+        "www.hasan-ehsan.cloud": true
+      };
+
+      var adSections = document.querySelectorAll("[data-ad-section]");
+      var isLiveAdsHost = window.location.protocol === "https:" && !!allowedHosts[window.location.hostname];
+
+      if (!isLiveAdsHost) {
+        return;
+      }
+
+      adSections.forEach(function (section) {
+        section.hidden = false;
+      });
+
+      document.querySelectorAll("ins.adsbygoogle").forEach(function (slot) {
+        if (slot.dataset.adInit === "done") {
+          return;
+        }
+
+        try {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          slot.dataset.adInit = "done";
+        } catch (error) {
+          console.warn("AdSense slot initialization failed.", error);
+        }
+      });
+
+      window.setTimeout(function () {
+        adSections.forEach(function (section) {
+          var slot = section.querySelector("ins.adsbygoogle");
+
+          if (!slot || slot.getAttribute("data-ad-status") === "unfilled") {
+            section.hidden = true;
+          }
+        });
+      }, 4000);
+    })();
+  </script>
+</body>
 
 </html>
