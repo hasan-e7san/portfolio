@@ -131,9 +131,24 @@
 
     gtag('config', 'G-TJ5BQVP13Y');
   </script>
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-gray-800 bg-black/80 backdrop-blur-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <nav class="h-16 flex items-center justify-center">
+        <ul class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-sm text-gray-300">
+          <li><a href="#home" class="hover:text-green-400 transition-colors">Home</a></li>
+          <li><a href="#featured-projects" class="hover:text-green-400 transition-colors">Projects</a></li>
+          <li><a href="#experience" class="hover:text-green-400 transition-colors">Experience</a></li>
+          <li><a href="#services" class="hover:text-green-400 transition-colors">Services</a></li>
+          <li><a href="#gallery" class="hover:text-green-400 transition-colors">Gallery</a></li>
+          <li><a href="#hire-me" class="hover:text-green-400 transition-colors">Hire me</a></li>
+          <li><a href="#contact" class="hover:text-green-400 transition-colors">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <div hidden=""></div>
   <div class="antialiased">
-    <main class="min-h-screen bg-[#1A1A1A] text-white overflow-x-hidden">
+    <main class="min-h-screen bg-[#1A1A1A] text-white overflow-x-hidden pt-16">
       <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20 opacity-10"></div>
         <div class="absolute inset-0">
@@ -327,6 +342,32 @@
           </div>
         </div>
       </section>
+      <section id="services" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold mb-4 text-center" style="opacity: 1;">Services</h2>
+          <p class="text-gray-400 mb-12 text-center max-w-3xl mx-auto">
+            I build business systems that save time &amp; automate operations.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-gray-900/50 rounded-xl p-6 backdrop-blur-sm border border-gray-800" style="opacity: 1; transform: none;">
+              <h3 class="text-xl font-semibold mb-3">Business Process Automation</h3>
+              <p class="text-gray-400">Automate repetitive tasks like approvals, follow-ups, and status updates so your team can focus on higher-value work.</p>
+            </div>
+            <div class="bg-gray-900/50 rounded-xl p-6 backdrop-blur-sm border border-gray-800" style="opacity: 1; transform: none;">
+              <h3 class="text-xl font-semibold mb-3">Custom Business Systems</h3>
+              <p class="text-gray-400">Build internal tools for operations, HR, sales, or finance that match your exact workflow instead of forcing generic software.</p>
+            </div>
+            <div class="bg-gray-900/50 rounded-xl p-6 backdrop-blur-sm border border-gray-800" style="opacity: 1; transform: none;">
+              <h3 class="text-xl font-semibold mb-3">Reports &amp; Dashboards</h3>
+              <p class="text-gray-400">Turn daily data into clear dashboards and reports so decision-makers can track performance and act quickly.</p>
+            </div>
+            <div class="bg-gray-900/50 rounded-xl p-6 backdrop-blur-sm border border-gray-800" style="opacity: 1; transform: none;">
+              <h3 class="text-xl font-semibold mb-3">Ongoing Support &amp; Improvements</h3>
+              <p class="text-gray-400">Maintain and improve your systems over time with bug fixes, upgrades, and new features as your business grows.</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="gallery" class="py-20 px-4 bg-gray-900/50">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-3xl font-bold mb-4 text-center" style="opacity: 1;">Project Gallery</h2>
@@ -400,6 +441,28 @@
                 class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
               <figcaption class="px-4 py-3 text-sm text-gray-300">Wedding invitations system</figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+      <section id="hire-me" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="relative p-8 rounded-2xl overflow-hidden backdrop-blur-lg border border-gray-800 bg-black/50" style="opacity: 1;">
+            <div class="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5"></div>
+            <div class="relative z-10">
+              <p class="text-green-500 mb-2 font-mono">$ hire --me</p>
+              <h2 class="text-3xl font-bold mb-4 text-gray-200">Hire me</h2>
+              <p class="text-gray-300 mb-6">Available for full-time roles and freelance projects focused on backend systems, full-stack applications, and cloud deployment.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 text-gray-300">
+                <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700">Scalable API and system architecture</div>
+                <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700">Modern web app development</div>
+                <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700">Database and performance optimization</div>
+                <div class="bg-gray-800/50 rounded-lg p-4 border border-gray-700">AWS deployment and maintenance</div>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="mailto:hasan.e7san@gmail.com" class="inline-block px-6 py-3 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors">Email Me</a>
+                <a href="#contact" class="inline-block px-6 py-3 bg-gray-800/60 text-gray-200 rounded-lg border border-gray-700 hover:bg-gray-700/60 transition-colors">View Contact Options</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
